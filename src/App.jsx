@@ -11,7 +11,7 @@ function App() {
   const [totalAge, setTotalAge] = useState(0);
 
   useEffect(() => {
-    fetch("../public/studentsList.json")
+    fetch("studentsList.json")
       .then((response) => response.json())
       .then((data) => setStudentsList(data))
       .catch((error) => console.log(error));
