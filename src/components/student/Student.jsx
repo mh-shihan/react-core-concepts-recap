@@ -1,6 +1,19 @@
-const Student = ({ studentsList }) => {
-  const { id, name, age, student_id, section, university } = studentsList;
-  return <div>I am from Student</div>;
+const Student = ({ student = {} }) => {
+  const { name, age, university } = student;
+  console.log(name);
+  return (
+    <div className="card bg-emerald-600 text-white w-96">
+      <div className="card-body items-center text-center">
+        <h2 className=" text-white text-3xl font-bold">{name}</h2>
+        <p>{university}</p>
+        <p>Age: {age}</p>
+        <div className="card-actions justify-end">
+          <button className="btn btn-primary">Add To Fev</button>
+          <button className="btn btn-secondary">Total Age</button>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default Student;

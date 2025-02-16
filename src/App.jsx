@@ -19,7 +19,7 @@ function App() {
     <>
       <Navbar></Navbar>
       <main className="max-w-screen-xl mx-auto bg-white  min-h-screen grid grid-cols-9 gap-2 my-4">
-        <div className="col-span-6  border-2 border-red-500 rounded-md">
+        <div className="col-span-6 pl-6   border-2 border-red-500 rounded-md">
           <Students studentsList={studentsList}></Students>
         </div>
         <div className="col-span-3 border-2 border-red-500 rounded-md">
