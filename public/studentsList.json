@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "name": "Alice Johnson",
+    "age": 21,
+    "student_id": "S1001",
+    "section": "A",
+    "university": "Harvard University"
+  },
+  {
+    "id": 2,
+    "name": "Bob Smith",
+    "age": 22,
+    "student_id": "S1002",
+    "section": "B",
+    "university": "Stanford University"
+  },
+  {
+    "id": 3,
+    "name": "Charlie Brown",
+    "age": 20,
+    "student_id": "S1003",
+    "section": "A",
+    "university": "MIT"
+  },
+  {
+    "id": 4,
+    "name": "David Wilson",
+    "age": 23,
+    "student_id": "S1004",
+    "section": "C",
+    "university": "Yale University"
+  },
+  {
+    "id": 5,
+    "name": "Emma Davis",
+    "age": 21,
+    "student_id": "S1005",
+    "section": "B",
+    "university": "Princeton University"
+  },
+  {
+    "id": 6,
+    "name": "Frank Miller",
+    "age": 22,
+    "student_id": "S1006",
+    "section": "A",
+    "university": "Columbia University"
+  },
+  {
+    "id": 7,
+    "name": "Grace Lee",
+    "age": 20,
+    "student_id": "S1007",
+    "section": "C",
+    "university": "University of Chicago"
+  },
+  {
+    "id": 8,
+    "name": "Henry Adams",
+    "age": 23,
+    "student_id": "S1008",
+    "section": "B",
+    "university": "Duke University"
+  },
+  {
+    "id": 9,
+    "name": "Isabella Thomas",
+    "age": 21,
+    "student_id": "S1009",
+    "section": "A",
+    "university": "University of California, Berkeley"
+  },
+  {
+    "id": 10,
+    "name": "Jack White",
+    "age": 22,
+    "student_id": "S1010",
+    "section": "C",
+    "university": "University of Pennsylvania"
+  }
+]
