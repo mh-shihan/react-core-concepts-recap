@@ -1,6 +1,6 @@
 import Student from "../student/student";
 
-const Students = ({ studentsList = [] }) => {
+const Students = ({ studentsList = [], handleAddToFev }) => {
   return (
     <div>
       <h1 className="text-3xl text-center py-4 font-bold">
@@ -8,7 +8,11 @@ const Students = ({ studentsList = [] }) => {
       </h1>
       <div className="  grid grid-cols-2 gap-3  ">
         {studentsList.map((student) => (
-          <Student key={student.id} student={student}></Student>
+          <Student
+            key={student.id}
+            student={student}
+            handleAddToFev={handleAddToFev}
+          ></Student>
         ))}
       </div>
     </div>

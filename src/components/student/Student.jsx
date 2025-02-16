@@ -1,6 +1,5 @@
-const Student = ({ student = {} }) => {
+const Student = ({ student = {}, handleAddToFev }) => {
   const { name, age, university } = student;
-  console.log(name);
   return (
     <div className="card bg-emerald-600 text-white w-96">
       <div className="card-body items-center text-center">
@@ -8,7 +7,12 @@ const Student = ({ student = {} }) => {
         <p>{university}</p>
         <p>Age: {age}</p>
         <div className="card-actions justify-end">
-          <button className="btn btn-primary">Add To Fev</button>
+          <button
+            onClick={() => handleAddToFev(student)}
+            className="btn btn-primary"
+          >
+            Add To Fev
+          </button>
           <button className="btn btn-secondary">Total Age</button>
         </div>
       </div>
