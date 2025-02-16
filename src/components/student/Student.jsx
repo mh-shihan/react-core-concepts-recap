@@ -1,4 +1,4 @@
-const Student = ({ student = {}, handleAddToFev }) => {
+const Student = ({ student = {}, handleAddToFev, handleTotalAge }) => {
   const { name, age, university } = student;
   return (
     <div className="card bg-emerald-600 text-white w-96">
@@ -13,7 +13,12 @@ const Student = ({ student = {}, handleAddToFev }) => {
           >
             Add To Fev
           </button>
-          <button className="btn btn-secondary">Total Age</button>
+          <button
+            onClick={() => handleTotalAge(student)}
+            className="btn btn-secondary"
+          >
+            Total Age
+          </button>
         </div>
       </div>
     </div>

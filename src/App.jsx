@@ -7,6 +7,8 @@ import Students from "./components/students/Students";
 function App() {
   const [studentsList, setStudentsList] = useState([]);
   const [fevStudents, setFevStudents] = useState([]);
+  // const [alreadySelected, setAlreadySelected] = useState(-1);
+  const [totalAge, setTotalAge] = useState(0);
 
   useEffect(() => {
     fetch("../public/studentsList.json")
@@ -16,9 +18,18 @@ function App() {
   }, []);
 
   const handleAddToFev = (student) => {
-    const newArray = [...fevStudents, student];
-    setFevStudents(newArray);
-    console.log(newArray);
+    let newArray = [...fevStudents];
+
+    let alreadySelected = newArray.find((s) => s.id === student.id);
+    if (!alreadySelected) {
+      newArray.push(student);
+      setFevStudents(newArray);
+    }
+  };
+
+  const handleTotalAge = (student) => {
+    const age = student.age;
+    setTotalAge(totalAge + age);
   };
 
   return (
@@ -29,10 +40,14 @@ function App() {
           <Students
             studentsList={studentsList}
             handleAddToFev={handleAddToFev}
+            handleTotalAge={handleTotalAge}
           ></Students>
         </div>
         <div className="col-span-3 border-2 border-red-500 rounded-md">
-          <Favourites fevStudents={fevStudents}></Favourites>
+          <Favourites
+            fevStudents={fevStudents}
+            totalAge={totalAge}
+          ></Favourites>
         </div>
       </main>
 

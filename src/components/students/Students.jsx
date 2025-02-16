@@ -1,6 +1,6 @@
 import Student from "../student/student";
 
-const Students = ({ studentsList = [], handleAddToFev }) => {
+const Students = ({ studentsList = [], handleAddToFev, handleTotalAge }) => {
   return (
     <div>
       <h1 className="text-3xl text-center py-4 font-bold">
@@ -12,6 +12,7 @@ const Students = ({ studentsList = [], handleAddToFev }) => {
             key={student.id}
             student={student}
             handleAddToFev={handleAddToFev}
+            handleTotalAge={handleTotalAge}
           ></Student>
         ))}
       </div>
