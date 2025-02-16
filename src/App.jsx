@@ -1,7 +1,13 @@
+import Navbar from "./components/navbar/Navbar";
+
 function App() {
   return (
     <>
-      <h1 className="bg-red-500">Vite + React</h1>
+      <body>
+        <header>
+          <Navbar></Navbar>
+        </header>
+      </body>
     </>
   );
 }
