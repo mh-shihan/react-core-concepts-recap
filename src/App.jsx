@@ -27,10 +27,15 @@ function App() {
     }
   };
 
-  const handleTotalAge = (student) => {
-    const age = student.age;
-    setTotalAge(totalAge + age);
+  const handleRemove = (student) => {
+    const newArray = fevStudents.filter((s) => s.id !== student.id);
+    setFevStudents(newArray);
   };
+
+  useEffect(() => {
+    const total = fevStudents.reduce((sum, stu) => sum + stu.age, 0);
+    setTotalAge(total);
+  }, [fevStudents]);
 
   return (
     <>
@@ -40,7 +45,8 @@ function App() {
           <Students
             studentsList={studentsList}
             handleAddToFev={handleAddToFev}
-            handleTotalAge={handleTotalAge}
+            handleTotalAge={totalAge}
+            handleRemove={handleRemove}
           ></Students>
         </div>
         <div className="col-span-3 border-2 border-red-500 rounded-md">

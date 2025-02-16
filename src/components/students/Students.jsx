@@ -1,6 +1,11 @@
 import Student from "../student/student";
 
-const Students = ({ studentsList = [], handleAddToFev, handleTotalAge }) => {
+const Students = ({
+  studentsList = [],
+  handleAddToFev,
+  handleTotalAge,
+  handleRemove,
+}) => {
   return (
     <div>
       <h1 className="text-3xl text-center py-4 font-bold">
@@ -13,6 +18,7 @@ const Students = ({ studentsList = [], handleAddToFev, handleTotalAge }) => {
             student={student}
             handleAddToFev={handleAddToFev}
             handleTotalAge={handleTotalAge}
+            handleRemove={handleRemove}
           ></Student>
         ))}
       </div>

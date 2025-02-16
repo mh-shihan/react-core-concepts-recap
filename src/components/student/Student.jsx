@@ -1,4 +1,4 @@
-const Student = ({ student = {}, handleAddToFev, handleTotalAge }) => {
+const Student = ({ student = {}, handleAddToFev, handleRemove }) => {
   const { name, age, university } = student;
   return (
     <div className="card bg-emerald-600 text-white w-96">
@@ -14,10 +14,10 @@ const Student = ({ student = {}, handleAddToFev, handleTotalAge }) => {
             Add To Fev
           </button>
           <button
-            onClick={() => handleTotalAge(student)}
-            className="btn btn-secondary"
+            onClick={() => handleRemove(student)}
+            className="btn btn-error"
           >
-            Total Age
+            Remove
           </button>
         </div>
       </div>
